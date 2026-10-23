@@ -15,24 +15,35 @@ public class Main {
         int roll1 = 0;
         int roll2 = 0;
 
-        // counters for numbers 2,4,6,7
+        int sumRolls = 0;
 
-        int  twoCounter = 0;
-        int fourCounter = 0;
-        int sixCounter = 0;
-        int SevenCounter = 0;
-        int sum = 0;
+        // counters for numbers 2,4,6,7
+        int counterTwo = 0;
+        int counterFour = 0;
+        int counterSix = 0;
+        int counterSeven = 0;
 
         System.out.println("*** Roll the Dice! ***");
 
+        //roll 2 dice 100 times
+        for (int i = 1; i <= 101; i++) {
+            roll1 = dice.roll();    //calling roll() method in for loop
+            roll2 = dice.roll();
+            sumRolls = roll1 + roll2;
 
+            System.out.printf("Roll %d: %d - %d | Sum: %d\n", i, roll1, roll2, sumRolls);
 
+            if (sumRolls == 2) {
+                counterTwo += 1;
+            } else if (sumRolls == 4) {
+                counterFour += 1;
+            } else if (sumRolls == 6) {
+                counterSix += 1;
+            } else if (sumRolls == 7) {
+                counterSeven += 1;
+            }
 
-        //create a loop
-
-        //call dice roll within the loop
-
-
+        }
 
     }
 
