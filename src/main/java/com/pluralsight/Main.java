@@ -43,6 +43,15 @@ public class Main {
                 counterSeven += 1;
             }
 
+
+            // print counters
+            System.out.printf("""
+                \n-> Counters for Sums of...
+                Two: %d
+                Four: %d
+                Six: %d
+                Seven: %d
+                """, counterTwo, counterFour, counterSix, counterSeven);
         }
 
     }
